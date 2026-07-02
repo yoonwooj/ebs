@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="-1" />    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>ebs x homelearn</title>
+  <link rel="stylesheet" href="common/css/common.css?v=1.1">  
+  <!-- <link rel="stylesheet" href="../css/imports.css?v=1.1"> -->
+   <link rel="stylesheet" href="css/css/imports.css?v=1.1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+  <div id="root">    
+    <div class="wrap middleSchool">
+      <main class="main flex">
+        <section class="contents left">
+          <div class="shadowBox">
+            <div class="align__center">
+              <p class="title__l exBold">내신<span class="color__sky">집중</span></p>
+            </div>
+            
+            <ul class="btnList flex">
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__kor"></i>
+                  <span class="mt__4 title__m exBold">국어</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__eng"></i>
+                  <span class="mt__4 title__m exBold">영어</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__mat"></i>
+                  <span class="mt__4 title__m exBold">수학</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__soc"></i>
+                  <span class="mt__4 title__m exBold">사회</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__sci"></i>
+                  <span class="mt__4 title__m exBold">과학</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__his"></i>
+                  <span class="mt__4 title__m exBold">역사</span>
+                </button>
+              </li>
+            </ul>
+
+            <button class="btn btn__full bg__sky flex__align--center"><i class="icon icon__setting"></i><span class="title__s exBold">교과서 설정</span></button>
+          </div><!--// shadowBox -->
+
+          <div class="shadowBox flex mt__20">
+            <button class="btn btn__full flex__align--center"><i class="icon icon__vacation"></i><span class="title__m exBold">단기특강</span></button>
+          </div><!--// shadowBox -->
+
+          <div class="banner mt__20">
+            <div class="swiper swiperBanner"> 
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <button class="btn">
+                    <img src="main/images/banner/banner_new.png" alt="">
+                    <span class="icon icon__label"><em class="blind">NEW</em></span>
+                  </button>                  
+                </div>
+                <div class="swiper-slide">
+                  <button class="btn">
+                    <img src="main/images/banner/banner_new.png" alt="">
+                  </button>                  
+                </div>
+                <div class="swiper-slide">
+                  <button class="btn">
+                    <img src="main/images/banner/banner_new.png" alt="">
+                    <span class="icon icon__label"><em class="blind">NEW</em></span>
+                  </button>                  
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>   
+            
+            <script>
+              var swiper = new Swiper(".swiperBanner", {
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+                pagination: {
+                  el: ".swiper-pagination",
+                },
+              });
+            </script>
+
+          </div><!--// slide -->
+        </section><!--// contents__left -->
+
+        <section class="contents center">
+          <div class="banner">
+            <button class="btn"><img src="main/images/banner/img_mainbanner.png" alt=""></button>            
+          </div>
+
+          <div class="center__slide">
+            <div class="center__title">
+              <p class="title__l exBold">과목별<span class="color__sky">추천 강좌</span></p>
+            </div>
+
+            <div class="slide">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="flex flex__align--between">
+                      <div class="lectureCard kor"><!--구영수사과역 : kor eng mat soc sci his-->
+                        <p class="title__s bold"><span class="badge">국어</span>강힘찬 선생님</p>
+                        <p class="title__m bold">국어 ①-1 시험만점<br>[동아(이)]</p>
+  
+                        <div class="auto__mt">
+                          <button class="btn btn__star">
+                            <i class="icon icon__tstar"></i>
+                            <span class="title__s exBold">T스타</span>
+                          </button>
+                        </div>
+                        
+                        <div class="teacherImg">
+                          <img src="main/images/teacher/teacher_01.png" alt="">
+                        </div>
+                      </div><!--//lectureCard -->
+  
+                      <div class="lectureCard soc">
+                        <p class="title__s bold"><span class="badge">국어</span>강힘찬 선생님</p>
+                        <p class="title__m bold">국어 ①-1 시험만점<br>[동아(이)]</p>
+  
+                        <div class="auto__mt">
+                          <button class="btn btn__star">
+                            <i class="icon icon__tstar"></i>
+                            <span class="title__s exBold">T스타</span>
+                          </button>
+                        </div>
+
+                        <div class="teacherImg">
+                          <img src="main/images/teacher/teacher_01.png" alt="">
+                        </div>
+                      </div><!--//lectureCard -->
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="flex flex__align--between">
+                      <div class="lectureCard mat"><!--구영수사과역 : kor eng mat soc sci his-->
+                        <p class="title__s bold"><span class="badge">국어</span>강힘찬 선생님</p>
+                        <p class="title__m bold">국어 ①-1 시험만점<br>[동아(이)]</p>
+  
+                        <div class="auto__mt">
+                          <button class="btn btn__star">
+                            <i class="icon icon__tstar"></i>
+                            <span class="title__s exBold">T스타</span>
+                          </button>
+                        </div>
+                        
+                        <div class="teacherImg">
+                          <img src="main/images/teacher/teacher_01.png" alt="">
+                        </div>
+                      </div><!--//lectureCard -->
+  
+                      <div class="lectureCard eng">
+                        <p class="title__s bold"><span class="badge">국어</span>강힘찬 선생님</p>
+                        <p class="title__m bold">국어 ①-1 시험만점<br>[동아(이)]</p>
+  
+                        <div class="auto__mt">
+                          <button class="btn btn__star">
+                            <i class="icon icon__tstar"></i>
+                            <span class="title__s exBold">T스타</span>
+                          </button>
+                        </div>
+
+                        <div class="teacherImg">
+                          <img src="main/images/teacher/teacher_01.png" alt="">
+                        </div>
+                      </div><!--//lectureCard -->
+                    </div>                    
+                  </div>
+                </div>
+
+                <div class="swiper-pagination">
+                  <span class="swiper-pagination-current"></span>
+                  / 
+                  <span class="swiper-pagination-total"></span>
+                </div>
+              </div>
+
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 20,
+                  // autoplay: {
+                  //   delay: 5000,
+                  //   disableOnInteraction: false,
+                  // },
+                  pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </section><!--// contents__main -->
+
+        <section class="contents right">
+          <div class="shadowBox">
+            <div class="align__center">
+              <p class="title__l exBold">시험<span class="color__sky">만점</span></p>
+            </div>
+            
+            <ul class="btnList btnList__twin flex">
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__test1"></i>
+                  <span class="title__s bold">실력평가</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__test2"></i>
+                  <span class="title__s bold">단원평가</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shadowBox mt__20">
+            <div class="align__center">
+              <p class="title__l exBold">시험<span class="color__sky">대비특강</span></p>
+            </div>
+            
+            <ul class="btnList btnList__triple flex">
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__prepare01"></i>
+                  <span class="title__s bold">족집게<br>특강</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__prepare02"></i>
+                  <span class="title__s bold">시험만점<br>문제</span>
+                </button>
+              </li>
+              <li>
+                <button class="btn btn__link">
+                  <i class="icon icon__prepare03"></i>
+                  <span class="title__s bold">서술형<br>특강</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex__align--between mt__20">
+            <div class="shadowBox shadowBox__half">
+              <button class="btn btn__link">
+                <i class="icon icon__7day"></i>
+                <span class="title__s bold">미라클 7일</span>
+              </button>
+            </div>
+
+            <div class="shadowBox shadowBox__half">
+              <button class="btn btn__link">
+                <i class="icon icon__note"></i>
+                <span class="title__s bold">오답노트</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="banner mt__20">
+            <button class="btn"><img src="main/images/banner/img_tstar.png" alt=""></button>
+          </div>
+        </section><!--// contents__right -->
+      </main><!--// main -->
+    </div><!--// wrap -->
+  </div><!--// root -->
+
+  
+  
+  
+</body>
+</html>

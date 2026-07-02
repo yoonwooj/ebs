@@ -1,0 +1,71 @@
+
+.title{
+  &__l{
+    font-size: 2.4rem;
+  }
+  &__m{
+    font-size: 2rem;
+  }
+  &__s{
+    font-size: 1.8rem;
+  }
+}
+
+.bold{
+  font-weight: 600;
+}
+
+.exBold{
+  font-weight: 800;
+}
+
+$fontColor: (
+  'sky': #2297ff,
+);
+
+$bgColor: (
+  'sky': #d6ecfa,
+);
+
+@each $name, $colors in $fontColor{
+  .color__#{$name} {
+    color:$colors;
+  }
+}
+
+@each $name, $colors in $bgColor{
+  .bg__#{$name} {
+    background: $colors;
+  }
+}
+
+// 공통 map 형태로 wrap
+// $color: (
+//   'fontColor': $fontColor,
+// );
+
+// $background: (
+//   'bgColor': $bgColor,
+// );
+
+// @each $groupName, $groupMap in $color {
+//   @each $key, $value in $groupMap {
+//      fontColor__sky
+//     .#{$category}__#{$name} {
+//        color: #{$value};
+//      }
+//   }
+// }
+
+// @each $groupName, $groupMap in $background {
+//   @each $key, $value in $groupMap {
+//      // bgColor__sky
+//      .#{$category}__#{$name} {
+//        background-color: #{$value};
+//      }
+//   }
+// }
+
+
+
+

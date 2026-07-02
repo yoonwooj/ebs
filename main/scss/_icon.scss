@@ -1,0 +1,59 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+
+.icon{
+  display: inline-block;
+  text-indent: -9999px;
+  overflow: hidden;
+  &__label{
+    position: absolute;
+    top:0;
+    left:2.4rem;
+  }
+}
+
+$iconName:
+  "kor" null,
+  "eng" null,
+  "mat" null,
+  "soc" null,
+  "sci" null,
+  "his" null,
+  "vacation" .8rem,
+  "test1" null,
+  "test2" null,
+  "7day" null,
+  "note" null,
+;
+
+@each $name, $mr in $iconName{
+  .icon__#{$name}{
+    margin-right: $mr;
+    width: 4.4rem;
+    height: 4.4rem;
+    background: url(#{$iconPath}#{$name}.png) 50% / 100% no-repeat;
+  }
+}
+
+$iconEtc:
+  "setting" 2.8rem 2.8rem .8rem,
+  "tstar" 2.4rem 2.4rem .8rem,
+  "prepare01" 2.8rem 2.8rem,
+  "prepare02" 2.8rem 2.8rem,
+  "prepare03" 2.8rem 2.8rem,
+  "label" 5.5rem 2.8rem
+;
+
+@each $name, $width, $height, $mr in $iconEtc{
+  .icon__#{$name}{
+    margin-right: $mr;
+    width: $width;
+    height: $height;  
+    background: url(#{$iconPath}#{$name}.png) 50% / 100% no-repeat;    
+  }
+}
+
+
+
+
+

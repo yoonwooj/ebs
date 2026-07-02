@@ -1,0 +1,79 @@
+.shadowBox{
+  padding: 1.2rem;
+  min-height: 6.8rem;
+  background: #fff;
+  border-radius: 2.4rem;
+  box-shadow: 0 0 .8rem 0 rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+  &__half{    
+    padding: 0;
+    width: calc(50% - .6rem);
+    height: 11.2rem;
+  }
+  .title__l{
+    margin-top: .8rem;
+    height: 2.4rem;
+    line-height: 1;
+  }
+  .btnList{
+    position: relative;
+    margin-top: 1.2rem;
+    padding: 0 1.2rem;
+    // width: 240px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:after{
+      content:'';
+      position: absolute;
+      top:50%;
+      left:50%;
+      width: .1rem;
+      height: 94%;
+      border-left: .1rem dashed #ccc;
+      transform: translateY(-50%);
+    }
+    li{    
+      width: 50%;
+      height: calc(26rem / 3);
+      border-top: .1rem dashed #ccc;
+      &:nth-child(-n+2){
+        border-top: none;
+      }
+    }  
+    + .btn__full{
+      margin-top: 1.2rem;
+    }
+    &__twin{
+      padding: 0;
+      &:after{
+        height: 78%;
+      }
+      li{
+        height: 9.2rem;        
+      }
+    }
+    &__triple{
+      padding: 1.2rem 0;
+      &:after{
+        border-left: none;
+      }
+      li{
+        width: calc(100% / 3);
+        height: 8.8rem;
+        border-left: .1rem dashed #ccc;
+        &:nth-child(-n+3){
+          border-top: none;
+        }
+        &:first-child{
+          border-left: none;
+        }
+        .title__s{
+          line-height: 2.2rem;
+        }
+      }
+    }
+  }  
+}
+
+
+

@@ -1,0 +1,157 @@
+
+// icon bg mixin
+// @mixin iconARoute{
+//   background:url('#{$iconPath}icons.png') no-repeat;
+//   background-size: 200px 400px;
+// }
+
+// 
+@mixin line-clamp($lineHeight, $line){
+  display:-webkit-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  line-height:$lineHeight;
+  // word-wrap:break-word;
+  word-break:break-word;
+  -webkit-line-clamp:$line; 
+  -webkit-box-orient:vertical;
+}
+
+@mixin ellipsis($lines: 1) {
+  @if ($lines==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin clearfix{
+  &:after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+}
+
+@mixin center($position){
+  position: $position;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerX($position){
+  position: $position;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+@mixin centerY($position){
+  position: $position;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+@mixin fixed(){
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+// @mixin bg-basic($imgPath:"../images/", $name: bg-img) {
+//   background-image: url('#{$imgPath}/#{$name}.png');
+// }
+// ex : @include bg-basic($imgPath, 'img_dummy_020@2x') ;
+
+// @mixin bg-normal($imgPath:"../images/", $name: bg-img, $repeat: no-repeat, $xy: 0 0, $bgSize: 100%,) {
+//   background-image: url('#{$imgPath}/#{$name}.png');
+//   background-repeat: $repeat;
+//   background-position: $xy;
+//   background-size: $bgSize;
+// }
+// @include bg-normal($imgPath, 'img_dummy_020@2x') ;
+// ex : 
+// width: 100px;
+// height: 80px;
+
+// * // 배경이미지 사이즈 지정
+// @mixin bg-img-size($width: 30.6rem, $height: 44px, $imgPath:"../images", $name: logo, $repeat: no-repeat) {
+//   // display: inline-block;
+//   width: $width;
+//   height: $height;
+//   background-image: url('#{$imgPath}/#{$name}.png');
+//   background-position: 0 0;
+//   background-size: $width $height;
+//   background-repeat: $repeat;
+// }
+// ex : @include bg-img-size(294px, 104px, $imgPath, 'img_dummy_020@2x');
+
+
+// $bg-position-x: 0;
+// $bg-poxition-y: 0;
+// =   background-position: $bg-position-x $bg-poxition-y;
+
+// $bg-size-y: 100%;
+// =   background-size: $bg-size-x $bg-size-y;
+
+// $bg-position-x: 0;
+// $bg-poxition-y: 0;
+// =   background-position: $bg-position-x $bg-poxition-y;
+
+// $bg-size-y: 100%;
+// =   background-size: $bg-size-x $bg-size-y;
+
+// ex 1
+@mixin position(
+  $p: absolute,
+  $t: null,
+  $b: null,
+  $l: null,
+  $r: null
+) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+}
+// ex = 1
+// .fixed {
+//   @include position(
+//     fixed,
+//     $t: 3rem,
+//     $r: 40px
+//   );
+// }
+
+
+
+// @function limitSize($size) {
+//   @if $size >= 0 and $size <= 200px {
+//     @return 200px;
+//   } @else {
+//     @return 800px;
+//   }
+// }
+
+// .test{
+//   width: limitSize(299px);
+//   height: limitSize(640px);
+// }
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+
+html,
+body,
+#root,
+.wrap{
+  height: 100%;
+}
+
+.wrap{
+  background: #F0F6FA;
+}
+.main{
+  padding: 3.3rem 4rem;
+  color: #222;
+  @include center(absolute);
+}
+
+.left,
+.right{
+  width: 26rem;
+  flex-shrink: 0;
+}
+
+.center{
+  margin: 0 2.6rem;
+  width: 62.8rem;
+  flex-shrink: 0;
+  &__slide{
+    margin-top: 3.4rem;
+    overflow-x: hidden;
+  }
+  &__title{
+    padding: 0 1.2rem;
+    .title__l{
+      line-height: 3.2rem;
+    }
+  }
+}
+
+.auto{
+  &__mt{
+    margin-top: auto;
+  }
+}
+
+@for $i from 2 through 10 {
+  .mt__#{5*$i}{
+    // margin-top: #{5*$i / 10}rem;
+    margin-top: (5 * $i / 10) * 1rem;
+  }
+}
+
+// @media (max-width: 1144px) {
+//   html {
+//     font-size: 50%;
+//   }
+// }
+
+// @for $i from 1145 through 1450 {
+//   $step: 1280 - $i; // 1280-1145=135   
+//   $font-size: 62.5 - ($step * 0.1); // 62.5-(135*0.1)=49
+
+//   @media (min-width: #{$i}px) {
+//     html {
+//       font-size: #{percentage($font-size / 100)};
+//     }
+//   }
+// }
+// $min: 50%;
+// $max: 80%;
+
+// html{
+//   // Clamp(50%, 0.44378vw + 27%, 80%)
+//   font-size: Clamp(#{$min}, calc(0.4vw + 30.5%), #{$max});
+// }
+
+// 폰트 사이즈 설정을 위한 믹스인
+@mixin responsive-font {
+  // 기본값 (가장 작은 해상도 기준 혹은 기본 설정)
+  font-size: Clamp(50%, 0.3vw + 30.5%, 80%);
+
+  // 1. 1224 * 768 (이미 기본값과 동일하므로 생략 가능하나 명시적 작성)
+  @media screen and (min-width: 1224px) {
+    font-size: Clamp(50%, 0.3vw + 30.5%, 80%);
+  }
+
+  // 2. 1280 * 768
+  @media screen and (min-width: 1280px) {
+    font-size: Clamp(50%, 0.4vw + 30.5%, 80%);
+  }
+
+  // 3. 1366 * 1024
+  @media screen and (min-width: 1366px) {
+    font-size: Clamp(50%, 0.41vw + 32%, 80%);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: Clamp(60%, 0.5vw + 40%, 99%);
+  }
+
+  @media screen and (min-width: 2001px) {
+    font-size: Clamp(60%, 0.5vw + 40%, 88%);
+  }
+}
+
+// 실제 적용
+.text-element {
+  @include responsive-font;
+}
+
+html{
+  @include responsive-font;
+}
+
+
+
+
